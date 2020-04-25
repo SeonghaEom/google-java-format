@@ -247,6 +247,19 @@
           <argLine>-Xmx1024m</argLine>
         </configuration>
       </plugin>
+      <plugin>
+          <!-- <groupId>org.pitest</groupId> -->
+          <artifactId>pitest-maven</artifactId>
+          <version>1.4.3</version>
+          <configuration>
+              <targetClasses>
+                  <param>com.google.googlejavaformat.*</param>
+              </targetClasses>
+              <targetTests>
+                  <param>com.google.googlejavaformat.*</param>
+              </targetTests>
+          </configuration>
+      </plugin>
     </plugins>
   </build>
 </project>
