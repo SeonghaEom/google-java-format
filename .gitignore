@@ -8,7 +8,7 @@
 .settings/
 .apt_generated/
 
-.target/
+./core/target/
 
 bin/
 out/
