@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.google.googlejavaformat.java.RemoveUnusedImportsTest" time="0.049" tests="13" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="11.0.7+8-LTS"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-11.0.7.jdk/Contents/Home/lib"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/na/Documents/google-java-format"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="user.country" value="KR"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/na/Documents/google-java-format"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="11.0.7+8-LTS"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/jr/9y464h7s5qbgbtzp4x9khc2m0000gp/T/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/usr/local/Cellar/maven/3.6.3_1/libexec/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/na/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="maven.conf" value="/usr/local/Cellar/maven/3.6.3_1/libexec/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.15.4"/>
+    <property name="library.jansi.path" value="/usr/local/Cellar/maven/3.6.3_1/libexec/lib/jansi-native"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|localhost|*.localhost|lx.astxsvc.com|*.lx.astxsvc.com|127.0.0.1:21300|*.127.0.0.1:21300"/>
+    <property name="user.home" value="/Users/na"/>
+    <property name="user.timezone" value="Asia/Seoul"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="user.name" value="na"/>
+    <property name="java.class.path" value="/usr/local/Cellar/maven/3.6.3_1/libexec/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-11.0.7.jdk/Contents/Home"/>
+    <property name="user.language" value="ko"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="11.0.7"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/usr/local/Cellar/maven/3.6.3_1/libexec"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2020-04-14"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="java.vendor.version" value="18.9"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|localhost|*.localhost|lx.astxsvc.com|*.lx.astxsvc.com|127.0.0.1:21300|*.127.0.0.1:21300"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|localhost|*.localhost|lx.astxsvc.com|*.lx.astxsvc.com|127.0.0.1:21300|*.127.0.0.1:21300"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="removeUnused[0: import java.util.List;&#10;import java.util.ArrayList;&#10;&#10;class Test {&#10;  /** could be an {@link ArrayList} */&#10;  List&lt;String&gt; xs;&#10;}&#10;]" classname="removeUnused[0: import java.util.List;&#10;import java.util.ArrayList;&#10;&#10;class Test {&#10;  /** could be an {@link ArrayList} */&#10;  List&lt;String&gt; xs;&#10;}&#10;](com.google.googlejavaformat.java.RemoveUnusedImportsTest)" time="0.029"/>
+  <testcase name="removeUnused[1: import java.util.ArrayList;&#10;import java.util.Collection;&#10;/** {@link ArrayList#add} {@link Collection#remove(Object)} */&#10;class Test {}&#10;]" classname="removeUnused[1: import java.util.ArrayList;&#10;import java.util.Collection;&#10;/** {@link ArrayList#add} {@link Collection#remove(Object)} */&#10;class Test {}&#10;](com.google.googlejavaformat.java.RemoveUnusedImportsTest)" time="0.002"/>
+  <testcase name="removeUnused[2: import a.A;&#10;import a.B;&#10;import a.C;&#10;class Test {&#10;  /** a&#10;   * {@link A} */&#10;  void f() {}&#10;}&#10;]" classname="removeUnused[2: import a.A;&#10;import a.B;&#10;import a.C;&#10;class Test {&#10;  /** a&#10;   * {@link A} */&#10;  void f() {}&#10;}&#10;](com.google.googlejavaformat.java.RemoveUnusedImportsTest)" time="0.002"/>
+  <testcase name="removeUnused[3: import a.A;import a.B;&#10;import a.C; // hello&#10;class Test {&#10;  B b;&#10;}&#10;]" classname="removeUnused[3: import a.A;import a.B;&#10;import a.C; // hello&#10;class Test {&#10;  B b;&#10;}&#10;](com.google.googlejavaformat.java.RemoveUnusedImportsTest)" time="0.001"/>
+  <testcase name="removeUnused[4: import a.A;&#10;import b.B;&#10;import c.C;&#10;import d.D;&#10;import e.E;&#10;import f.F;&#10;import g.G;&#10;import h.H;&#10;/**&#10; * {@link A} {@linkplain B} {@value D#FOO}&#10; *&#10; * @exception E&#10; * @throws F&#10; * @see C&#10; * @see H#foo&#10; * @see &lt;a href=&quot;whatever&quot;&gt;&#10; */&#10;class Test {&#10;}&#10;]" classname="removeUnused[4: import a.A;&#10;import b.B;&#10;import c.C;&#10;import d.D;&#10;import e.E;&#10;import f.F;&#10;import g.G;&#10;import h.H;&#10;/**&#10; * {@link A} {@linkplain B} {@value D#FOO}&#10; *&#10; * @exception E&#10; * @throws F&#10; * @see C&#10; * @see H#foo&#10; * @see &lt;a href=&quot;whatever&quot;&gt;&#10; */&#10;class Test {&#10;}&#10;](com.google.googlejavaformat.java.RemoveUnusedImportsTest)" time="0.003"/>
+  <testcase name="removeUnused[5: import java.util.Map;&#10;/** {@link Map.Entry#containsKey(Object)} } */&#10;class Test {}&#10;]" classname="removeUnused[5: import java.util.Map;&#10;/** {@link Map.Entry#containsKey(Object)} } */&#10;class Test {}&#10;](com.google.googlejavaformat.java.RemoveUnusedImportsTest)" time="0.002"/>
+  <testcase name="removeUnused[6: /** {@link #containsKey(Object)} } */&#10;class Test {}&#10;]" classname="removeUnused[6: /** {@link #containsKey(Object)} } */&#10;class Test {}&#10;](com.google.googlejavaformat.java.RemoveUnusedImportsTest)" time="0.001"/>
+  <testcase name="removeUnused[7: import java.util.*;&#10;class Test {&#10;  List&lt;String&gt; xs;&#10;}&#10;]" classname="removeUnused[7: import java.util.*;&#10;class Test {&#10;  List&lt;String&gt; xs;&#10;}&#10;](com.google.googlejavaformat.java.RemoveUnusedImportsTest)" time="0.001"/>
+  <testcase name="removeUnused[8: package com.foo;&#10;import static com.foo.Outer.A;&#10;import com.foo.*;&#10;import com.foo.B;&#10;import com.bar.C;&#10;class Test {&#10;  A a;&#10;  B b;&#10;  C c;&#10;}&#10;]" classname="removeUnused[8: package com.foo;&#10;import static com.foo.Outer.A;&#10;import com.foo.*;&#10;import com.foo.B;&#10;import com.bar.C;&#10;class Test {&#10;  A a;&#10;  B b;&#10;  C c;&#10;}&#10;](com.google.googlejavaformat.java.RemoveUnusedImportsTest)" time="0.002"/>
+  <testcase name="removeUnused[9: import java.util.Map;&#10;import java.util.Map.Entry;&#10;/** {@link #foo(Map.Entry[])} */&#10;public class Test {}&#10;]" classname="removeUnused[9: import java.util.Map;&#10;import java.util.Map.Entry;&#10;/** {@link #foo(Map.Entry[])} */&#10;public class Test {}&#10;](com.google.googlejavaformat.java.RemoveUnusedImportsTest)" time="0.002"/>
+  <testcase name="removeUnused[10: import java.util.List;&#10;import java.util.Collection;&#10;/** {@link java.util.List#containsAll(Collection)} */&#10;public class Test {}&#10;]" classname="removeUnused[10: import java.util.List;&#10;import java.util.Collection;&#10;/** {@link java.util.List#containsAll(Collection)} */&#10;public class Test {}&#10;](com.google.googlejavaformat.java.RemoveUnusedImportsTest)" time="0.002"/>
+  <testcase name="removeUnused[11: package p;&#10;import java.lang.Foo;&#10;import java.lang.Foo.Bar;&#10;import p.Baz;&#10;import p.Baz.Bork;&#10;public class Test implements Foo, Bar, Baz, Bork {}&#10;]" classname="removeUnused[11: package p;&#10;import java.lang.Foo;&#10;import java.lang.Foo.Bar;&#10;import p.Baz;&#10;import p.Baz.Bork;&#10;public class Test implements Foo, Bar, Baz, Bork {}&#10;](com.google.googlejavaformat.java.RemoveUnusedImportsTest)" time="0.001"/>
+  <testcase name="removeUnused[12: import java.lang.Foo;&#10;interface Test { private static void foo() {} }&#10;]" classname="removeUnused[12: import java.lang.Foo;&#10;interface Test { private static void foo() {} }&#10;](com.google.googlejavaformat.java.RemoveUnusedImportsTest)" time="0.001"/>
+</testsuite>

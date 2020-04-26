@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.google.googlejavaformat.java.PartialFormattingTest" time="0.768" tests="180" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="11.0.7+8-LTS"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-11.0.7.jdk/Contents/Home/lib"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/na/Documents/google-java-format"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="user.country" value="KR"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/na/Documents/google-java-format"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="11.0.7+8-LTS"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/jr/9y464h7s5qbgbtzp4x9khc2m0000gp/T/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/usr/local/Cellar/maven/3.6.3_1/libexec/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/na/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="maven.conf" value="/usr/local/Cellar/maven/3.6.3_1/libexec/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.15.4"/>
+    <property name="library.jansi.path" value="/usr/local/Cellar/maven/3.6.3_1/libexec/lib/jansi-native"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|localhost|*.localhost|lx.astxsvc.com|*.lx.astxsvc.com|127.0.0.1:21300|*.127.0.0.1:21300"/>
+    <property name="user.home" value="/Users/na"/>
+    <property name="user.timezone" value="Asia/Seoul"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="user.name" value="na"/>
+    <property name="java.class.path" value="/usr/local/Cellar/maven/3.6.3_1/libexec/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-11.0.7.jdk/Contents/Home"/>
+    <property name="user.language" value="ko"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="11.0.7"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/usr/local/Cellar/maven/3.6.3_1/libexec"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2020-04-14"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="java.vendor.version" value="18.9"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|localhost|*.localhost|lx.astxsvc.com|*.lx.astxsvc.com|127.0.0.1:21300|*.127.0.0.1:21300"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|localhost|*.localhost|lx.astxsvc.com|*.lx.astxsvc.com|127.0.0.1:21300|*.127.0.0.1:21300"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="afterNewline[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.058"/>
+  <testcase name="b117602702[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="blankAndComment[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="nestedStatement1[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="nestedStatement2[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="statementAndComments2[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.004"/>
+  <testcase name="statementAndComments3[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.005"/>
+  <testcase name="b21668189[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="insertTrailingNewlines[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="preserveTrailingWhitespaceAfterNewline[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="testGetFormatReplacementRanges[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="emptyFile[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="lineWithTrailingComment[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="expandToStatement[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="formatTrailingBraceEmptyClassBody[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="onNewline[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.063"/>
+  <testcase name="ignoreNeighbouringStatements[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="trailingNonBreakingWhitespace[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="switchCase[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="emptyStatement[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="insertLeadingNewlines2[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="testReplacementsSorted_DescendingInput[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="testOutOfRangeLines[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="insertLeadingNewlines[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="partialModifierOrder[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.004"/>
+  <testcase name="b36458607[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="outOfRangeEndLine[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="commentBeforeBadConstructor[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="lineWithIdentifier[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="expandToMethodSignature[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="noTokensOnLine[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="b32159971[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="partialEnum[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="testEmptyFirstLine[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="trailingWhitespace[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="statementAndComments[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="lineInsideComment[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="expandToClassSignature[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="testLengthRange[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.004"/>
+  <testcase name="rejoinMethodSignatureLines[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="outOfRangeStartLine[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="endOfLineStatementNewline[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="trailing[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="importJavadocNewlines[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="testReplacementsSorted[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="noTrailingWhitespace[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="endOfLine[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.004"/>
+  <testcase name="endOfLineStatement[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="testLength[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.004"/>
+  <testcase name="onlyPackage[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="blankLine[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.004"/>
+  <testcase name="formatTrailingBraceEmptyMethodBody[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="testEmptyLastLine[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="formatTrailingBrace[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="importNewlines[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="nestedStatement_allowPartial[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="testGetFormatReplacements0[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="testGetFormatReplacements1[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="formatTrailingBraceEmptyClassBody2[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="nestedSwitchCase[0]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="afterNewline[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.063"/>
+  <testcase name="b117602702[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="blankAndComment[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="nestedStatement1[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="nestedStatement2[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="statementAndComments2[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="statementAndComments3[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="b21668189[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="insertTrailingNewlines[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="preserveTrailingWhitespaceAfterNewline[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="testGetFormatReplacementRanges[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="emptyFile[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="lineWithTrailingComment[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="expandToStatement[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="formatTrailingBraceEmptyClassBody[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="onNewline[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.059"/>
+  <testcase name="ignoreNeighbouringStatements[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="trailingNonBreakingWhitespace[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="switchCase[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="emptyStatement[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="insertLeadingNewlines2[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="testReplacementsSorted_DescendingInput[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.009"/>
+  <testcase name="testOutOfRangeLines[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="insertLeadingNewlines[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="partialModifierOrder[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.004"/>
+  <testcase name="b36458607[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="outOfRangeEndLine[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.004"/>
+  <testcase name="commentBeforeBadConstructor[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="lineWithIdentifier[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.004"/>
+  <testcase name="expandToMethodSignature[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="noTokensOnLine[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.005"/>
+  <testcase name="b32159971[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="partialEnum[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.004"/>
+  <testcase name="testEmptyFirstLine[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="trailingWhitespace[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="statementAndComments[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.004"/>
+  <testcase name="lineInsideComment[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="expandToClassSignature[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="testLengthRange[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="rejoinMethodSignatureLines[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="outOfRangeStartLine[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="endOfLineStatementNewline[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="trailing[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="importJavadocNewlines[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.004"/>
+  <testcase name="testReplacementsSorted[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="noTrailingWhitespace[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="endOfLine[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.005"/>
+  <testcase name="endOfLineStatement[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="testLength[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="onlyPackage[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="blankLine[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="formatTrailingBraceEmptyMethodBody[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="testEmptyLastLine[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="formatTrailingBrace[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="importNewlines[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.004"/>
+  <testcase name="nestedStatement_allowPartial[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="testGetFormatReplacements0[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="testGetFormatReplacements1[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="formatTrailingBraceEmptyClassBody2[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="nestedSwitchCase[1]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="afterNewline[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.053"/>
+  <testcase name="b117602702[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="blankAndComment[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="nestedStatement1[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="nestedStatement2[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="statementAndComments2[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.004"/>
+  <testcase name="statementAndComments3[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="b21668189[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="insertTrailingNewlines[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.015"/>
+  <testcase name="preserveTrailingWhitespaceAfterNewline[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="testGetFormatReplacementRanges[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="emptyFile[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="lineWithTrailingComment[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="expandToStatement[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="formatTrailingBraceEmptyClassBody[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="onNewline[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.058"/>
+  <testcase name="ignoreNeighbouringStatements[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="trailingNonBreakingWhitespace[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="switchCase[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="emptyStatement[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="insertLeadingNewlines2[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="testReplacementsSorted_DescendingInput[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="testOutOfRangeLines[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="insertLeadingNewlines[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="partialModifierOrder[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="b36458607[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.004"/>
+  <testcase name="outOfRangeEndLine[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="commentBeforeBadConstructor[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="lineWithIdentifier[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="expandToMethodSignature[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="noTokensOnLine[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.005"/>
+  <testcase name="b32159971[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="partialEnum[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.004"/>
+  <testcase name="testEmptyFirstLine[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="trailingWhitespace[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="statementAndComments[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.004"/>
+  <testcase name="lineInsideComment[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="expandToClassSignature[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="testLengthRange[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="rejoinMethodSignatureLines[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="outOfRangeStartLine[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.004"/>
+  <testcase name="endOfLineStatementNewline[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="trailing[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="importJavadocNewlines[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.004"/>
+  <testcase name="testReplacementsSorted[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="noTrailingWhitespace[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="endOfLine[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.004"/>
+  <testcase name="endOfLineStatement[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="testLength[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.004"/>
+  <testcase name="onlyPackage[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="blankLine[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.004"/>
+  <testcase name="formatTrailingBraceEmptyMethodBody[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="testEmptyLastLine[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.003"/>
+  <testcase name="formatTrailingBrace[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="importNewlines[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.009"/>
+  <testcase name="nestedStatement_allowPartial[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="testGetFormatReplacements0[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="testGetFormatReplacements1[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+  <testcase name="formatTrailingBraceEmptyClassBody2[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.001"/>
+  <testcase name="nestedSwitchCase[2]" classname="com.google.googlejavaformat.java.PartialFormattingTest" time="0.002"/>
+</testsuite>

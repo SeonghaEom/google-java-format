@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>FormatFileCallable.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/*</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Copyright 2015 Google Inc.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Licensed under the Apache License, Version 2.0 (the &#34;License&#34;); you may not use this file except</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * in compliance with the License. You may obtain a copy of the License at</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *     http://www.apache.org/licenses/LICENSE-2.0</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Unless required by applicable law or agreed to in writing, software distributed under the License</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * is distributed on an &#34;AS IS&#34; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * or implied. See the License for the specific language governing permissions and limitations under</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * the License.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package com.google.googlejavaformat.java;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.google.common.collect.Range;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.google.common.collect.RangeSet;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.google.common.collect.TreeRangeSet;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.concurrent.Callable;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Encapsulates information about a file to be formatted, including which parts of the file to</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * format.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>class FormatFileCallable implements Callable&#60;String&#62; {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  private final String input;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  private final CommandLineOptions parameters;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  private final JavaFormatterOptions options;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public FormatFileCallable(</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_32'/>
+32
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_32'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      CommandLineOptions parameters, String input, JavaFormatterOptions options) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_33'/>
+33
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_33'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    this.input = input;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_34'/>
+34
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_34'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    this.parameters = parameters;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_35'/>
+35
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_35'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    this.options = options;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_36'/>
+36
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_36'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_37'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_38'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  @Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_39'/>
+39
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_39'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public String call() throws FormatterException {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_40'/>
+40
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_40'>1</a>
+<span>
+1. call : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    if (parameters.fixImportsOnly()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_41'/>
+41
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_41'>1</a>
+<span>
+1. call : mutated return of Object value for com/google/googlejavaformat/java/FormatFileCallable::call to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      return fixImports(input);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_42'/>
+42
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_42'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_43'/>
+43
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_43'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_44'/>
+44
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_44'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    Formatter formatter = new Formatter(options);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_45'/>
+45
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_45'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    String formatted = formatter.formatSource(input, characterRanges(input).asRanges());</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_46'/>
+46
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_46'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    formatted = fixImports(formatted);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_47'/>
+47
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_47'>1</a>
+<span>
+1. call : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    if (parameters.reflowLongStrings()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_48'/>
+48
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_48'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      formatted = StringWrapper.wrap(Formatter.MAX_LINE_LENGTH, formatted, formatter);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_49'/>
+49
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_49'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_50'/>
+50
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_50'>1</a>
+<span>
+1. call : mutated return of Object value for com/google/googlejavaformat/java/FormatFileCallable::call to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return formatted;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_51'/>
+51
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_51'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_52'/>
+52
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_52'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_53'/>
+53
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_53'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  private String fixImports(String input) throws FormatterException {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_54'/>
+54
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_54'>1</a>
+<span>
+1. fixImports : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    if (parameters.removeUnusedImports()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_55'/>
+55
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_55'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      input = RemoveUnusedImports.removeUnusedImports(input);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_56'/>
+56
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_56'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_57'/>
+57
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_57'>1</a>
+<span>
+1. fixImports : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    if (parameters.sortImports()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_58'/>
+58
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_58'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      input = ImportOrderer.reorderImports(input, options.style());</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_59'/>
+59
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_59'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_60'/>
+60
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_60'>1</a>
+<span>
+1. fixImports : mutated return of Object value for com/google/googlejavaformat/java/FormatFileCallable::fixImports to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return input;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_61'/>
+61
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_61'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_62'/>
+62
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_62'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_63'/>
+63
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_63'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  private RangeSet&#60;Integer&#62; characterRanges(String input) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_64'/>
+64
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_64'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    final RangeSet&#60;Integer&#62; characterRanges = TreeRangeSet.create();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_65'/>
+65
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_65'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_66'/>
+66
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_66'>2</a>
+<span>
+1. characterRanges : negated conditional &rarr; KILLED<br/>
+2. characterRanges : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    if (parameters.lines().isEmpty() &#38;&#38; parameters.offsets().isEmpty()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_67'/>
+67
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_67'>1</a>
+<span>
+1. characterRanges : removed call to com/google/common/collect/RangeSet::add &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      characterRanges.add(Range.closedOpen(0, input.length()));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_68'/>
+68
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_68'>1</a>
+<span>
+1. characterRanges : mutated return of Object value for com/google/googlejavaformat/java/FormatFileCallable::characterRanges to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      return characterRanges;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_69'/>
+69
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_69'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_70'/>
+70
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_70'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_71'/>
+71
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_71'>1</a>
+<span>
+1. characterRanges : removed call to com/google/common/collect/RangeSet::addAll &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    characterRanges.addAll(Formatter.lineRangesToCharRanges(input, parameters.lines()));</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_72'/>
+72
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_72'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_73'/>
+73
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_73'>3</a>
+<span>
+1. characterRanges : changed conditional boundary &rarr; KILLED<br/>
+2. characterRanges : Changed increment from 1 to -1 &rarr; KILLED<br/>
+3. characterRanges : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    for (int i = 0; i &#60; parameters.offsets().size(); i++) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_74'/>
+74
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_74'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      Integer length = parameters.lengths().get(i);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_75'/>
+75
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_75'>1</a>
+<span>
+1. characterRanges : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      if (length == 0) {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_76'/>
+76
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_76'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        // 0 stands for &#34;format the line under the cursor&#34;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_77'/>
+77
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_77'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        length = 1;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_78'/>
+78
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_78'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_79'/>
+79
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_79'>1</a>
+<span>
+1. characterRanges : removed call to com/google/common/collect/RangeSet::add &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      characterRanges.add(</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_80'/>
+80
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_80'>1</a>
+<span>
+1. characterRanges : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>          Range.closedOpen(parameters.offsets().get(i), parameters.offsets().get(i) + length));</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_81'/>
+81
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_81'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_82'/>
+82
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_82'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_83'/>
+83
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_83'>1</a>
+<span>
+1. characterRanges : mutated return of Object value for com/google/googlejavaformat/java/FormatFileCallable::characterRanges to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return characterRanges;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_84'/>
+84
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_84'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@734c13f7_85'/>
+85
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_85'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@734c13f7_40'>40</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_40'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>call<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.testFormatLengthOutOfRange(com.google.googlejavaformat.java.FormatterTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@734c13f7_41'>41</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_41'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>call<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.importOrderingWithoutFormatting(com.google.googlejavaformat.java.FormatterTest)</span></span> mutated return of Object value for com/google/googlejavaformat/java/FormatFileCallable::call to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@734c13f7_47'>47</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_47'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>call<br/><b>Killed by : </b>com.google.googlejavaformat.java.MainTest.noReflowLongStrings(com.google.googlejavaformat.java.MainTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@734c13f7_50'>50</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_50'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>call<br/><b>Killed by : </b>com.google.googlejavaformat.java.PartialFormattingTest.testEmptyFirstLine[0](com.google.googlejavaformat.java.PartialFormattingTest)</span></span> mutated return of Object value for com/google/googlejavaformat/java/FormatFileCallable::call to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@734c13f7_54'>54</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_54'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>fixImports<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.importOrderingWithoutFormatting(com.google.googlejavaformat.java.FormatterTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@734c13f7_57'>57</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_57'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>fixImports<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.importOrderingWithoutFormatting(com.google.googlejavaformat.java.FormatterTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@734c13f7_60'>60</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_60'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>fixImports<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.importOrderingWithoutFormatting(com.google.googlejavaformat.java.FormatterTest)</span></span> mutated return of Object value for com/google/googlejavaformat/java/FormatFileCallable::fixImports to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@734c13f7_66'>66</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_66'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>characterRanges<br/><b>Killed by : </b>com.google.googlejavaformat.java.MainTest.dryRunStdinChanged(com.google.googlejavaformat.java.MainTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>characterRanges<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.testFormatLengthOutOfRange(com.google.googlejavaformat.java.FormatterTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@734c13f7_67'>67</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_67'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>characterRanges<br/><b>Killed by : </b>com.google.googlejavaformat.java.MainTest.dryRunStdinChanged(com.google.googlejavaformat.java.MainTest)</span></span> removed call to com/google/common/collect/RangeSet::add &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@734c13f7_68'>68</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_68'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>characterRanges<br/><b>Killed by : </b>com.google.googlejavaformat.java.DiagnosticTest.lexErrorStdin(com.google.googlejavaformat.java.DiagnosticTest)</span></span> mutated return of Object value for com/google/googlejavaformat/java/FormatFileCallable::characterRanges to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@734c13f7_71'>71</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_71'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>characterRanges<br/><b>Killed by : </b>com.google.googlejavaformat.java.PartialFormattingTest.testOutOfRangeLines[0](com.google.googlejavaformat.java.PartialFormattingTest)</span></span> removed call to com/google/common/collect/RangeSet::addAll &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@734c13f7_73'>73</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_73'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>characterRanges<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.testFormatLengthOutOfRange(com.google.googlejavaformat.java.FormatterTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>characterRanges<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.testFormatLengthOutOfRange(com.google.googlejavaformat.java.FormatterTest)</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>characterRanges<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.testFormatLengthOutOfRange(com.google.googlejavaformat.java.FormatterTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@734c13f7_75'>75</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_75'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>characterRanges<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.testFormatLengthOutOfRange(com.google.googlejavaformat.java.FormatterTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@734c13f7_79'>79</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_79'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>characterRanges<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.testFormatLengthOutOfRange(com.google.googlejavaformat.java.FormatterTest)</span></span> removed call to com/google/common/collect/RangeSet::add &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@734c13f7_80'>80</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_80'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>characterRanges<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.testFormatLengthOutOfRange(com.google.googlejavaformat.java.FormatterTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@734c13f7_83'>83</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@734c13f7_83'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>characterRanges<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.testFormatLengthOutOfRange(com.google.googlejavaformat.java.FormatterTest)</span></span> mutated return of Object value for com/google/googlejavaformat/java/FormatFileCallable::characterRanges to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>INCREMENTS_MUTATOR</li>
+<li class='mutator'>VOID_METHOD_CALL_MUTATOR</li>
+<li class='mutator'>RETURN_VALS_MUTATOR</li>
+<li class='mutator'>MATH_MUTATOR</li>
+<li class='mutator'>NEGATE_CONDITIONALS_MUTATOR</li>
+<li class='mutator'>INVERT_NEGS_MUTATOR</li>
+<li class='mutator'>CONDITIONALS_BOUNDARY_MUTATOR</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>com.google.googlejavaformat.java.PartialFormattingTest.blankLine[1](com.google.googlejavaformat.java.PartialFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.importJavadocNewlines[2](com.google.googlejavaformat.java.PartialFormattingTest) (7 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.statementAndComments3[1](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.statementAndComments[1](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.b36458607[0](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.DiagnosticTest.oneFileParseErrorReplace(com.google.googlejavaformat.java.DiagnosticTest) (11 ms)</li><li>com.google.googlejavaformat.java.DiagnosticTest.oneFileParseError(com.google.googlejavaformat.java.DiagnosticTest) (14 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.testLengthRange[0](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.endOfLine[0](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.importNewlines[0](com.google.googlejavaformat.java.PartialFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.MainTest.reflowLongStrings(com.google.googlejavaformat.java.MainTest) (25 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.outOfRangeStartLine[2](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.lineWithIdentifier[1](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.noTokensOnLine[2](com.google.googlejavaformat.java.PartialFormattingTest) (7 ms)</li><li>com.google.googlejavaformat.java.FormatterTest.importOrderingAndFormatting(com.google.googlejavaformat.java.FormatterTest) (9 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.testEmptyFirstLine[1](com.google.googlejavaformat.java.PartialFormattingTest) (3 ms)</li><li>com.google.googlejavaformat.java.FormatterTest.formattingWithoutImportOrdering(com.google.googlejavaformat.java.FormatterTest) (7 ms)</li><li>com.google.googlejavaformat.java.MainTest.imports(com.google.googlejavaformat.java.MainTest) (9 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.statementAndComments2[2](com.google.googlejavaformat.java.PartialFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.DiagnosticTest.lexErrorStdin(com.google.googlejavaformat.java.DiagnosticTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.lineWithIdentifier[0](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.testEmptyFirstLine[0](com.google.googlejavaformat.java.PartialFormattingTest) (3 ms)</li><li>com.google.googlejavaformat.java.DiagnosticTest.parseError2(com.google.googlejavaformat.java.DiagnosticTest) (6 ms)</li><li>com.google.googlejavaformat.java.FormatterTest.testFormatStdinStdoutWithDashFlag(com.google.googlejavaformat.java.FormatterTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterTest.importOrderingWithoutFormatting(com.google.googlejavaformat.java.FormatterTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.importNewlines[1](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.partialModifierOrder[2](com.google.googlejavaformat.java.PartialFormattingTest) (8 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.lineWithTrailingComment[0](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.outOfRangeEndLine[0](com.google.googlejavaformat.java.PartialFormattingTest) (8 ms)</li><li>com.google.googlejavaformat.java.DiagnosticTest.lexError2(com.google.googlejavaformat.java.DiagnosticTest) (6 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.testEmptyLastLine[2](com.google.googlejavaformat.java.PartialFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.blankLine[0](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.testEmptyFirstLine[2](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.lineWithTrailingComment[2](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.MainTest.javadoc(com.google.googlejavaformat.java.MainTest) (4 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.blankLine[2](com.google.googlejavaformat.java.PartialFormattingTest) (3 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.lineInsideComment[0](com.google.googlejavaformat.java.PartialFormattingTest) (8 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.testLength[2](com.google.googlejavaformat.java.PartialFormattingTest) (7 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.testOutOfRangeLines[1](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.statementAndComments2[1](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.testLengthRange[1](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.testEmptyLastLine[1](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.importJavadocNewlines[0](com.google.googlejavaformat.java.PartialFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.MainTest.assumeFilename_dryRun(com.google.googlejavaformat.java.MainTest) (4 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.testOutOfRangeLines[2](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.FormatterTest.testFormatAosp(com.google.googlejavaformat.java.FormatterTest) (6 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.importJavadocNewlines[1](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.partialModifierOrder[0](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.testEmptyLastLine[0](com.google.googlejavaformat.java.PartialFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.MainTest.importRemoveErrorParseError(com.google.googlejavaformat.java.MainTest) (2 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.b32159971[2](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.MainTest.newline(com.google.googlejavaformat.java.MainTest) (2 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.b32159971[1](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.partialModifierOrder[1](com.google.googlejavaformat.java.PartialFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.MainTest.dryRunStdinChanged(com.google.googlejavaformat.java.MainTest) (3 ms)</li><li>com.google.googlejavaformat.java.MainTest.noFormatJavadoc(com.google.googlejavaformat.java.MainTest) (8 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.partialEnum[1](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.importNewlines[2](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.b21668189[0](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.testLengthRange[2](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.testOutOfRangeLines[0](com.google.googlejavaformat.java.PartialFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.b32159971[0](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.testLength[1](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.statementAndComments2[0](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.MainTest.dryRunStdinUnchanged(com.google.googlejavaformat.java.MainTest) (3 ms)</li><li>com.google.googlejavaformat.java.MainTest.preserveOriginalFile(com.google.googlejavaformat.java.MainTest) (7 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.outOfRangeEndLine[1](com.google.googlejavaformat.java.PartialFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.outOfRangeEndLine[2](com.google.googlejavaformat.java.PartialFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.noTokensOnLine[0](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.MainTest.dryRunFiles(com.google.googlejavaformat.java.MainTest) (23 ms)</li><li>com.google.googlejavaformat.java.MainTest.optimizeImportsDoesNotLeaveEmptyLines(com.google.googlejavaformat.java.MainTest) (6 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.lineWithTrailingComment[1](com.google.googlejavaformat.java.PartialFormattingTest) (7 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.lineInsideComment[1](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.b36458607[2](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.noTokensOnLine[1](com.google.googlejavaformat.java.PartialFormattingTest) (8 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.lineInsideComment[2](com.google.googlejavaformat.java.PartialFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.endOfLine[2](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.MainTest.keepGoingWhenFilesDontExist(com.google.googlejavaformat.java.MainTest) (4 ms)</li><li>com.google.googlejavaformat.java.DiagnosticTest.parseErrorStdin(com.google.googlejavaformat.java.DiagnosticTest) (4 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.testLength[0](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.MainTest.importRemovalLines(com.google.googlejavaformat.java.MainTest) (3 ms)</li><li>com.google.googlejavaformat.java.FormatterTest.testFormatLengthOutOfRange(com.google.googlejavaformat.java.FormatterTest) (4 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.endOfLine[1](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.partialEnum[0](com.google.googlejavaformat.java.PartialFormattingTest) (11 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.b117602702[2](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.lineWithIdentifier[2](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.FormatterTest.testFormatLengthUpToEOF(com.google.googlejavaformat.java.FormatterTest) (4 ms)</li><li>com.google.googlejavaformat.java.MainTest.packageInfo(com.google.googlejavaformat.java.MainTest) (4 ms)</li><li>com.google.googlejavaformat.java.DiagnosticTest.parseError(com.google.googlejavaformat.java.DiagnosticTest) (6 ms)</li><li>com.google.googlejavaformat.java.FormatterTest.formattingWithoutRemovingUnusedImports(com.google.googlejavaformat.java.FormatterTest) (7 ms)</li><li>com.google.googlejavaformat.java.MainTest.noReflowLongStrings(com.google.googlejavaformat.java.MainTest) (4 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.b36458607[1](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.outOfRangeStartLine[1](com.google.googlejavaformat.java.PartialFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.MainTest.assumeFilename_error(com.google.googlejavaformat.java.MainTest) (2 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.statementAndComments[0](com.google.googlejavaformat.java.PartialFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.b117602702[0](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.statementAndComments3[2](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.b117602702[1](com.google.googlejavaformat.java.PartialFormattingTest) (8 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.b21668189[2](com.google.googlejavaformat.java.PartialFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.outOfRangeStartLine[0](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.statementAndComments3[0](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.statementAndComments[2](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.DiagnosticTest.lexError(com.google.googlejavaformat.java.DiagnosticTest) (40 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.b21668189[1](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.partialEnum[2](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.4.3
+
+</body>
+</html>

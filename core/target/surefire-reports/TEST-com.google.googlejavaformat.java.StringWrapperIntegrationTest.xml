@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.312" tests="64" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="11.0.7+8-LTS"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-11.0.7.jdk/Contents/Home/lib"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/na/Documents/google-java-format"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="user.country" value="KR"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/na/Documents/google-java-format"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="11.0.7+8-LTS"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/jr/9y464h7s5qbgbtzp4x9khc2m0000gp/T/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/usr/local/Cellar/maven/3.6.3_1/libexec/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/na/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="maven.conf" value="/usr/local/Cellar/maven/3.6.3_1/libexec/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.15.4"/>
+    <property name="library.jansi.path" value="/usr/local/Cellar/maven/3.6.3_1/libexec/lib/jansi-native"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|localhost|*.localhost|lx.astxsvc.com|*.lx.astxsvc.com|127.0.0.1:21300|*.127.0.0.1:21300"/>
+    <property name="user.home" value="/Users/na"/>
+    <property name="user.timezone" value="Asia/Seoul"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="user.name" value="na"/>
+    <property name="java.class.path" value="/usr/local/Cellar/maven/3.6.3_1/libexec/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-11.0.7.jdk/Contents/Home"/>
+    <property name="user.language" value="ko"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="11.0.7"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/usr/local/Cellar/maven/3.6.3_1/libexec"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2020-04-14"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="java.vendor.version" value="18.9"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|localhost|*.localhost|lx.astxsvc.com|*.lx.astxsvc.com|127.0.0.1:21300|*.127.0.0.1:21300"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|localhost|*.localhost|lx.astxsvc.com|*.lx.astxsvc.com|127.0.0.1:21300|*.127.0.0.1:21300"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="testCRLF[0]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.011"/>
+  <testcase name="testCR[0]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.007"/>
+  <testcase name="test[0]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.011"/>
+  <testcase name="idempotent[0]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.009"/>
+  <testcase name="testCRLF[1]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="testCR[1]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.005"/>
+  <testcase name="test[1]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="idempotent[1]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.005"/>
+  <testcase name="testCRLF[2]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="testCR[2]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.006"/>
+  <testcase name="test[2]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.006"/>
+  <testcase name="idempotent[2]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.005"/>
+  <testcase name="testCRLF[3]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="testCR[3]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.025"/>
+  <testcase name="test[3]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.007"/>
+  <testcase name="idempotent[3]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="testCRLF[4]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="testCR[4]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="test[4]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="idempotent[4]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="testCRLF[5]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.003"/>
+  <testcase name="testCR[5]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="test[5]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.003"/>
+  <testcase name="idempotent[5]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.003"/>
+  <testcase name="testCRLF[6]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.003"/>
+  <testcase name="testCR[6]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="test[6]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="idempotent[6]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="testCRLF[7]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.003"/>
+  <testcase name="testCR[7]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="test[7]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.003"/>
+  <testcase name="idempotent[7]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.005"/>
+  <testcase name="testCRLF[8]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.003"/>
+  <testcase name="testCR[8]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="test[8]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="idempotent[8]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.005"/>
+  <testcase name="testCRLF[9]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="testCR[9]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="test[9]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.003"/>
+  <testcase name="idempotent[9]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="testCRLF[10]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.003"/>
+  <testcase name="testCR[10]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.003"/>
+  <testcase name="test[10]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="idempotent[10]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.005"/>
+  <testcase name="testCRLF[11]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.002"/>
+  <testcase name="testCR[11]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.02"/>
+  <testcase name="test[11]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.003"/>
+  <testcase name="idempotent[11]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="testCRLF[12]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="testCR[12]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.003"/>
+  <testcase name="test[12]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="idempotent[12]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.005"/>
+  <testcase name="testCRLF[13]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.002"/>
+  <testcase name="testCR[13]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.003"/>
+  <testcase name="test[13]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.003"/>
+  <testcase name="idempotent[13]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.005"/>
+  <testcase name="testCRLF[14]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="testCR[14]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="test[14]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="idempotent[14]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="testCRLF[15]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="testCR[15]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.003"/>
+  <testcase name="test[15]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.004"/>
+  <testcase name="idempotent[15]" classname="com.google.googlejavaformat.java.StringWrapperIntegrationTest" time="0.005"/>
+</testsuite>

@@ -1,0 +1,3246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>JavaCommentsHelper.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/*</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Copyright 2015 Google Inc.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Licensed under the Apache License, Version 2.0 (the &#34;License&#34;); you may not use this file except</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * in compliance with the License. You may obtain a copy of the License at</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *     http://www.apache.org/licenses/LICENSE-2.0</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Unless required by applicable law or agreed to in writing, software distributed under the License</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * is distributed on an &#34;AS IS&#34; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * or implied. See the License for the specific language governing permissions and limitations under</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * the License.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package com.google.googlejavaformat.java;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.google.common.base.CharMatcher;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.google.common.base.Strings;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.google.googlejavaformat.CommentsHelper;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.google.googlejavaformat.Input.Tok;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.google.googlejavaformat.Newlines;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import com.google.googlejavaformat.java.javadoc.JavadocFormatter;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.ArrayList;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.Iterator;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.List;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.regex.Matcher;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.regex.Pattern;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/** {@code JavaCommentsHelper} extends {@link CommentsHelper} to rewrite Java comments. */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public final class JavaCommentsHelper implements CommentsHelper {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_32'/>
+32
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_32'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  private final String lineSeparator;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_33'/>
+33
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_33'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  private final JavaFormatterOptions options;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_34'/>
+34
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_34'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_35'/>
+35
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_35'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>  public JavaCommentsHelper(String lineSeparator, JavaFormatterOptions options) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_36'/>
+36
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_36'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    this.lineSeparator = lineSeparator;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_37'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    this.options = options;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_38'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_39'/>
+39
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_39'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_40'/>
+40
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_40'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  @Override</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_41'/>
+41
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_41'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public String rewrite(Tok tok, int maxWidth, int column0) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_42'/>
+42
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_42'>1</a>
+<span>
+1. rewrite : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    if (!tok.isComment()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_43'/>
+43
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_43'>1</a>
+<span>
+1. rewrite : mutated return of Object value for com/google/googlejavaformat/java/JavaCommentsHelper::rewrite to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      return tok.getOriginalText();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_44'/>
+44
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_44'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_45'/>
+45
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_45'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    String text = tok.getOriginalText();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_46'/>
+46
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_46'>2</a>
+<span>
+1. rewrite : negated conditional &rarr; KILLED<br/>
+2. rewrite : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    if (tok.isJavadocComment() &#38;&#38; options.formatJavadoc()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_47'/>
+47
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_47'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      text = JavadocFormatter.formatJavadoc(text, column0);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_48'/>
+48
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_48'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_49'/>
+49
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_49'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    List&#60;String&#62; lines = new ArrayList&#60;&#62;();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_50'/>
+50
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_50'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    Iterator&#60;String&#62; it = Newlines.lineIterator(text);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_51'/>
+51
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_51'>1</a>
+<span>
+1. rewrite : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    while (it.hasNext()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_52'/>
+52
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_52'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      lines.add(CharMatcher.whitespace().trimTrailingFrom(it.next()));</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_53'/>
+53
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_53'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_54'/>
+54
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_54'>1</a>
+<span>
+1. rewrite : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    if (tok.isSlashSlashComment()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_55'/>
+55
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_55'>1</a>
+<span>
+1. rewrite : mutated return of Object value for com/google/googlejavaformat/java/JavaCommentsHelper::rewrite to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      return indentLineComments(lines, column0);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_56'/>
+56
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_56'>1</a>
+<span>
+1. rewrite : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    } else if (javadocShaped(lines)) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_57'/>
+57
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_57'>1</a>
+<span>
+1. rewrite : mutated return of Object value for com/google/googlejavaformat/java/JavaCommentsHelper::rewrite to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      return indentJavadoc(lines, column0);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_58'/>
+58
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_58'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    } else {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_59'/>
+59
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_59'>1</a>
+<span>
+1. rewrite : mutated return of Object value for com/google/googlejavaformat/java/JavaCommentsHelper::rewrite to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      return preserveIndentation(lines, column0);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_60'/>
+60
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_60'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_61'/>
+61
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_61'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_62'/>
+62
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_62'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_63'/>
+63
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_63'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  // For non-javadoc-shaped block comments, shift the entire block to the correct</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_64'/>
+64
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_64'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  // column, but do not adjust relative indentation.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_65'/>
+65
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_65'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  private String preserveIndentation(List&#60;String&#62; lines, int column0) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_66'/>
+66
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_66'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    StringBuilder builder = new StringBuilder();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_67'/>
+67
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_67'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_68'/>
+68
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_68'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    // find the leftmost non-whitespace character in all trailing lines</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_69'/>
+69
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_69'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    int startCol = -1;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_70'/>
+70
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_70'>3</a>
+<span>
+1. preserveIndentation : changed conditional boundary &rarr; KILLED<br/>
+2. preserveIndentation : Changed increment from 1 to -1 &rarr; KILLED<br/>
+3. preserveIndentation : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    for (int i = 1; i &#60; lines.size(); i++) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_71'/>
+71
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_71'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      int lineIdx = CharMatcher.whitespace().negate().indexIn(lines.get(i));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_72'/>
+72
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_72'>5</a>
+<span>
+1. preserveIndentation : changed conditional boundary &rarr; SURVIVED<br/>
+2. preserveIndentation : changed conditional boundary &rarr; KILLED<br/>
+3. preserveIndentation : negated conditional &rarr; KILLED<br/>
+4. preserveIndentation : negated conditional &rarr; KILLED<br/>
+5. preserveIndentation : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>      if (lineIdx &#62;= 0 &#38;&#38; (startCol == -1 || lineIdx &#60; startCol)) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_73'/>
+73
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_73'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        startCol = lineIdx;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_74'/>
+74
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_74'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_75'/>
+75
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_75'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_76'/>
+76
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_76'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_77'/>
+77
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_77'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    // output the first line at the current column</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_78'/>
+78
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_78'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    builder.append(lines.get(0));</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_79'/>
+79
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_79'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_80'/>
+80
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_80'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    // output all trailing lines with plausible indentation</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_81'/>
+81
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_81'>2</a>
+<span>
+1. preserveIndentation : changed conditional boundary &rarr; KILLED<br/>
+2. preserveIndentation : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    for (int i = 1; i &#60; lines.size(); ++i) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_82'/>
+82
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_82'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      builder.append(lineSeparator).append(Strings.repeat(&#34; &#34;, column0));</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_83'/>
+83
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_83'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      // check that startCol is valid index, e.g. for blank lines</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_84'/>
+84
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_84'>2</a>
+<span>
+1. preserveIndentation : changed conditional boundary &rarr; SURVIVED<br/>
+2. preserveIndentation : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>      if (lines.get(i).length() &#62;= startCol) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_85'/>
+85
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_85'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        builder.append(lines.get(i).substring(startCol));</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_86'/>
+86
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_86'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      } else {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_87'/>
+87
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_87'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        builder.append(lines.get(i));</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_88'/>
+88
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_88'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_89'/>
+89
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_89'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_90'/>
+90
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_90'>1</a>
+<span>
+1. preserveIndentation : mutated return of Object value for com/google/googlejavaformat/java/JavaCommentsHelper::preserveIndentation to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return builder.toString();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_91'/>
+91
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_91'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_92'/>
+92
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_92'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_93'/>
+93
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_93'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  // Wraps and re-indents line comments.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_94'/>
+94
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_94'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  private String indentLineComments(List&#60;String&#62; lines, int column0) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_95'/>
+95
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_95'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    lines = wrapLineComments(lines, column0);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_96'/>
+96
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_96'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    StringBuilder builder = new StringBuilder();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_97'/>
+97
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_97'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    builder.append(lines.get(0).trim());</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_98'/>
+98
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_98'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    String indentString = Strings.repeat(&#34; &#34;, column0);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_99'/>
+99
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_99'>2</a>
+<span>
+1. indentLineComments : changed conditional boundary &rarr; KILLED<br/>
+2. indentLineComments : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    for (int i = 1; i &#60; lines.size(); ++i) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_100'/>
+100
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_100'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      builder.append(lineSeparator).append(indentString).append(lines.get(i).trim());</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_101'/>
+101
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_101'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_102'/>
+102
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_102'>1</a>
+<span>
+1. indentLineComments : mutated return of Object value for com/google/googlejavaformat/java/JavaCommentsHelper::indentLineComments to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return builder.toString();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_103'/>
+103
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_103'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_104'/>
+104
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_104'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_105'/>
+105
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_105'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  // Preserve special `//noinspection` and `//$NON-NLS-x$` comments used by IDEs, which cannot</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_106'/>
+106
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_106'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  // contain leading spaces.</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_107'/>
+107
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_107'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>  private static final Pattern LINE_COMMENT_MISSING_SPACE_PREFIX =</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_108'/>
+108
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_108'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      Pattern.compile(&#34;^(//+)(?!noinspection|\\$NON-NLS-\\d+\\$)[^\\s/]&#34;);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_109'/>
+109
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_109'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_110'/>
+110
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_110'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  private List&#60;String&#62; wrapLineComments(List&#60;String&#62; lines, int column0) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_111'/>
+111
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_111'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    List&#60;String&#62; result = new ArrayList&#60;&#62;();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_112'/>
+112
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_112'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    for (String line : lines) {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_113'/>
+113
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_113'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      // Add missing leading spaces to line comments: `//foo` -&#62; `// foo`.</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_114'/>
+114
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_114'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      Matcher matcher = LINE_COMMENT_MISSING_SPACE_PREFIX.matcher(line);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_115'/>
+115
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_115'>1</a>
+<span>
+1. wrapLineComments : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      if (matcher.find()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_116'/>
+116
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_116'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        int length = matcher.group(1).length();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_117'/>
+117
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_117'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        line = Strings.repeat(&#34;/&#34;, length) + &#34; &#34; + line.substring(length);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_118'/>
+118
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_118'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_119'/>
+119
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_119'>1</a>
+<span>
+1. wrapLineComments : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      if (line.startsWith(&#34;// MOE:&#34;)) {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_120'/>
+120
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_120'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        // don&#39;t wrap comments for https://github.com/google/MOE</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_121'/>
+121
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_121'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        result.add(line);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_122'/>
+122
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_122'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        continue;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_123'/>
+123
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_123'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_124'/>
+124
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_124'>3</a>
+<span>
+1. wrapLineComments : changed conditional boundary &rarr; KILLED<br/>
+2. wrapLineComments : Replaced integer addition with subtraction &rarr; KILLED<br/>
+3. wrapLineComments : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      while (line.length() + column0 &#62; Formatter.MAX_LINE_LENGTH) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_125'/>
+125
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_125'>1</a>
+<span>
+1. wrapLineComments : Replaced integer subtraction with addition &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        int idx = Formatter.MAX_LINE_LENGTH - column0;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_126'/>
+126
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_126'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        // only break on whitespace characters, and ignore the leading `// `</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_127'/>
+127
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_127'>3</a>
+<span>
+1. wrapLineComments : changed conditional boundary &rarr; SURVIVED<br/>
+2. wrapLineComments : negated conditional &rarr; KILLED<br/>
+3. wrapLineComments : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        while (idx &#62;= 2 &#38;&#38; !CharMatcher.whitespace().matches(line.charAt(idx))) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_128'/>
+128
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_128'>1</a>
+<span>
+1. wrapLineComments : Changed increment from -1 to 1 &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>          idx--;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_129'/>
+129
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_129'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_130'/>
+130
+</td>
+<td class='uncertain'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_130'>2</a>
+<span>
+1. wrapLineComments : changed conditional boundary &rarr; TIMED_OUT<br/>
+2. wrapLineComments : negated conditional &rarr; TIMED_OUT<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='uncertain'>        if (idx &#60;= 2) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_131'/>
+131
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_131'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>          break;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_132'/>
+132
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_132'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_133'/>
+133
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_133'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        result.add(line.substring(0, idx));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_134'/>
+134
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_134'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        line = &#34;//&#34; + line.substring(idx);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_135'/>
+135
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_135'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_136'/>
+136
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_136'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      result.add(line);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_137'/>
+137
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_137'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_138'/>
+138
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_138'>1</a>
+<span>
+1. wrapLineComments : mutated return of Object value for com/google/googlejavaformat/java/JavaCommentsHelper::wrapLineComments to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return result;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_139'/>
+139
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_139'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_140'/>
+140
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_140'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_141'/>
+141
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_141'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  // Remove leading whitespace (trailing was already removed), and re-indent.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_142'/>
+142
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_142'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  // Add a +1 indent before &#39;*&#39;, and add the &#39;*&#39; if necessary.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_143'/>
+143
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_143'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  private String indentJavadoc(List&#60;String&#62; lines, int column0) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_144'/>
+144
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_144'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    StringBuilder builder = new StringBuilder();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_145'/>
+145
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_145'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    builder.append(lines.get(0).trim());</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_146'/>
+146
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_146'>1</a>
+<span>
+1. indentJavadoc : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    int indent = column0 + 1;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_147'/>
+147
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_147'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    String indentString = Strings.repeat(&#34; &#34;, indent);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_148'/>
+148
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_148'>2</a>
+<span>
+1. indentJavadoc : changed conditional boundary &rarr; KILLED<br/>
+2. indentJavadoc : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    for (int i = 1; i &#60; lines.size(); ++i) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_149'/>
+149
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_149'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      builder.append(lineSeparator).append(indentString);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_150'/>
+150
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_150'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      String line = lines.get(i).trim();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_151'/>
+151
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_151'>1</a>
+<span>
+1. indentJavadoc : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      if (!line.startsWith(&#34;*&#34;)) {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_152'/>
+152
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_152'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>        builder.append(&#34;* &#34;);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_153'/>
+153
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_153'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_154'/>
+154
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_154'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      builder.append(line);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_155'/>
+155
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_155'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_156'/>
+156
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_156'>1</a>
+<span>
+1. indentJavadoc : mutated return of Object value for com/google/googlejavaformat/java/JavaCommentsHelper::indentJavadoc to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return builder.toString();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_157'/>
+157
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_157'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_158'/>
+158
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_158'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_159'/>
+159
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_159'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  // Returns true if the comment looks like javadoc</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_160'/>
+160
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_160'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  private static boolean javadocShaped(List&#60;String&#62; lines) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_161'/>
+161
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_161'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    Iterator&#60;String&#62; it = lines.iterator();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_162'/>
+162
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_162'>1</a>
+<span>
+1. javadocShaped : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    if (!it.hasNext()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_163'/>
+163
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_163'>1</a>
+<span>
+1. javadocShaped : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>      return false;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_164'/>
+164
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_164'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_165'/>
+165
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_165'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    String first = it.next().trim();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_166'/>
+166
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_166'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    // if it&#39;s actually javadoc, we&#39;re done</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_167'/>
+167
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_167'>1</a>
+<span>
+1. javadocShaped : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    if (first.startsWith(&#34;/**&#34;)) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_168'/>
+168
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_168'>1</a>
+<span>
+1. javadocShaped : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      return true;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_169'/>
+169
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_169'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_170'/>
+170
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_170'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    // if it&#39;s a block comment, check all trailing lines for &#39;*&#39;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_171'/>
+171
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_171'>1</a>
+<span>
+1. javadocShaped : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    if (!first.startsWith(&#34;/*&#34;)) {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_172'/>
+172
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_172'>1</a>
+<span>
+1. javadocShaped : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; NO_COVERAGE<br/>
+
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class='survived'>      return false;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_173'/>
+173
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_173'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_174'/>
+174
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_174'>1</a>
+<span>
+1. javadocShaped : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    while (it.hasNext()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_175'/>
+175
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_175'>1</a>
+<span>
+1. javadocShaped : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      if (!it.next().trim().startsWith(&#34;*&#34;)) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_176'/>
+176
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_176'>1</a>
+<span>
+1. javadocShaped : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return false;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_177'/>
+177
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_177'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_178'/>
+178
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_178'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_179'/>
+179
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_179'>1</a>
+<span>
+1. javadocShaped : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return true;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_180'/>
+180
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_180'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_181'/>
+181
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_181'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_182'/>
+182
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_182'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_42'>42</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_42'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>rewrite<br/><b>Killed by : </b>com.google.googlejavaformat.java.JavadocFormattingTest.emptyMultipleLines(com.google.googlejavaformat.java.JavadocFormattingTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_43'>43</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_43'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>rewrite<br/><b>Killed by : </b>com.google.googlejavaformat.java.PartialFormattingTest.emptyFile[1](com.google.googlejavaformat.java.PartialFormattingTest)</span></span> mutated return of Object value for com/google/googlejavaformat/java/JavaCommentsHelper::rewrite to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_46'>46</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_46'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>rewrite<br/><b>Killed by : </b>com.google.googlejavaformat.java.JavadocFormattingTest.empty(com.google.googlejavaformat.java.JavadocFormattingTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>rewrite<br/><b>Killed by : </b>com.google.googlejavaformat.java.JavadocFormattingTest.emptyMultipleLines(com.google.googlejavaformat.java.JavadocFormattingTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_51'>51</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_51'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>rewrite<br/><b>Killed by : </b>com.google.googlejavaformat.java.JavadocFormattingTest.empty(com.google.googlejavaformat.java.JavadocFormattingTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_54'>54</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_54'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>rewrite<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.blockCommentInteriorTrailingBlank(com.google.googlejavaformat.java.FormatterTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_55'>55</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_55'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>rewrite<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.dontWrapMoeLineComments(com.google.googlejavaformat.java.FormatterTest)</span></span> mutated return of Object value for com/google/googlejavaformat/java/JavaCommentsHelper::rewrite to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_56'>56</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_56'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>rewrite<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.blockCommentInteriorTrailingBlank(com.google.googlejavaformat.java.FormatterTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_57'>57</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_57'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>rewrite<br/><b>Killed by : </b>com.google.googlejavaformat.java.JavadocFormattingTest.empty(com.google.googlejavaformat.java.JavadocFormattingTest)</span></span> mutated return of Object value for com/google/googlejavaformat/java/JavaCommentsHelper::rewrite to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_59'>59</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_59'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>rewrite<br/><b>Killed by : </b>com.google.googlejavaformat.java.PartialFormattingTest.lineInsideComment[2](com.google.googlejavaformat.java.PartialFormattingTest)</span></span> mutated return of Object value for com/google/googlejavaformat/java/JavaCommentsHelper::rewrite to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_70'>70</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_70'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>preserveIndentation<br/><b>Killed by : </b>com.google.googlejavaformat.java.PartialFormattingTest.lineInsideComment[2](com.google.googlejavaformat.java.PartialFormattingTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>preserveIndentation<br/><b>Killed by : </b>com.google.googlejavaformat.java.PartialFormattingTest.lineInsideComment[2](com.google.googlejavaformat.java.PartialFormattingTest)</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>preserveIndentation<br/><b>Killed by : </b>com.google.googlejavaformat.java.PartialFormattingTest.lineInsideComment[2](com.google.googlejavaformat.java.PartialFormattingTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_72'>72</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_72'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>preserveIndentation<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterIntegrationTest.format[63: B24543625](com.google.googlejavaformat.java.FormatterIntegrationTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>preserveIndentation<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>preserveIndentation<br/><b>Killed by : </b>com.google.googlejavaformat.java.PartialFormattingTest.lineInsideComment[2](com.google.googlejavaformat.java.PartialFormattingTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>preserveIndentation<br/><b>Killed by : </b>com.google.googlejavaformat.java.PartialFormattingTest.lineInsideComment[2](com.google.googlejavaformat.java.PartialFormattingTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>preserveIndentation<br/><b>Killed by : </b>com.google.googlejavaformat.java.PartialFormattingTest.lineInsideComment[2](com.google.googlejavaformat.java.PartialFormattingTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_81'>81</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_81'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>preserveIndentation<br/><b>Killed by : </b>com.google.googlejavaformat.java.PartialFormattingTest.lineInsideComment[2](com.google.googlejavaformat.java.PartialFormattingTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>preserveIndentation<br/><b>Killed by : </b>com.google.googlejavaformat.java.PartialFormattingTest.lineInsideComment[2](com.google.googlejavaformat.java.PartialFormattingTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_84'>84</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_84'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>preserveIndentation<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>preserveIndentation<br/><b>Killed by : </b>com.google.googlejavaformat.java.PartialFormattingTest.lineInsideComment[2](com.google.googlejavaformat.java.PartialFormattingTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_90'>90</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_90'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>preserveIndentation<br/><b>Killed by : </b>com.google.googlejavaformat.java.PartialFormattingTest.lineInsideComment[2](com.google.googlejavaformat.java.PartialFormattingTest)</span></span> mutated return of Object value for com/google/googlejavaformat/java/JavaCommentsHelper::preserveIndentation to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_99'>99</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_99'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>indentLineComments<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.dontWrapMoeLineComments(com.google.googlejavaformat.java.FormatterTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>indentLineComments<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.dontWrapMoeLineComments(com.google.googlejavaformat.java.FormatterTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_102'>102</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_102'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>indentLineComments<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.dontWrapMoeLineComments(com.google.googlejavaformat.java.FormatterTest)</span></span> mutated return of Object value for com/google/googlejavaformat/java/JavaCommentsHelper::indentLineComments to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_115'>115</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_115'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>wrapLineComments<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.dontWrapMoeLineComments(com.google.googlejavaformat.java.FormatterTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_119'>119</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_119'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>wrapLineComments<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.dontWrapMoeLineComments(com.google.googlejavaformat.java.FormatterTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_124'>124</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_124'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>wrapLineComments<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[105: B38241237](com.google.googlejavaformat.java.FormatterIntegrationTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>wrapLineComments<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.wrapLineComment(com.google.googlejavaformat.java.FormatterTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>wrapLineComments<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.lineCommentTrailingThinSpace(com.google.googlejavaformat.java.FormatterTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_125'>125</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_125'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>wrapLineComments<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.onlyWrapLineCommentOnWhitespace_noLeadingWhitespace(com.google.googlejavaformat.java.FormatterTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_127'>127</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_127'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>wrapLineComments<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>wrapLineComments<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.onlyWrapLineCommentOnWhitespace_noLeadingWhitespace(com.google.googlejavaformat.java.FormatterTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>wrapLineComments<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.onlyWrapLineCommentOnWhitespace_noLeadingWhitespace(com.google.googlejavaformat.java.FormatterTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_128'>128</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_128'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>wrapLineComments<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.onlyWrapLineCommentOnWhitespace_noLeadingWhitespace(com.google.googlejavaformat.java.FormatterTest)</span></span> Changed increment from -1 to 1 &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_130'>130</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_130'/> 
+
+<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>wrapLineComments<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; TIMED_OUT</p> <p class='TIMED_OUT'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>wrapLineComments<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; TIMED_OUT</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_138'>138</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_138'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>wrapLineComments<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.dontWrapMoeLineComments(com.google.googlejavaformat.java.FormatterTest)</span></span> mutated return of Object value for com/google/googlejavaformat/java/JavaCommentsHelper::wrapLineComments to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_146'>146</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_146'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>indentJavadoc<br/><b>Killed by : </b>com.google.googlejavaformat.java.JavadocFormattingTest.empty(com.google.googlejavaformat.java.JavadocFormattingTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_148'>148</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_148'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>indentJavadoc<br/><b>Killed by : </b>com.google.googlejavaformat.java.JavadocFormattingTest.empty(com.google.googlejavaformat.java.JavadocFormattingTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>indentJavadoc<br/><b>Killed by : </b>com.google.googlejavaformat.java.JavadocFormattingTest.empty(com.google.googlejavaformat.java.JavadocFormattingTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_151'>151</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_151'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>indentJavadoc<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.blockCommentInteriorTrailingBlank(com.google.googlejavaformat.java.FormatterTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_156'>156</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_156'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>indentJavadoc<br/><b>Killed by : </b>com.google.googlejavaformat.java.JavadocFormattingTest.empty(com.google.googlejavaformat.java.JavadocFormattingTest)</span></span> mutated return of Object value for com/google/googlejavaformat/java/JavaCommentsHelper::indentJavadoc to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_162'>162</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_162'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>javadocShaped<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.blockCommentInteriorTrailingBlank(com.google.googlejavaformat.java.FormatterTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_163'>163</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_163'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>javadocShaped<br/><b>Killed by : </b>none</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_167'>167</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_167'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>javadocShaped<br/><b>Killed by : </b>com.google.googlejavaformat.java.PartialFormattingTest.lineInsideComment[2](com.google.googlejavaformat.java.PartialFormattingTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_168'>168</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_168'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>javadocShaped<br/><b>Killed by : </b>com.google.googlejavaformat.java.JavadocFormattingTest.joinedTokens(com.google.googlejavaformat.java.JavadocFormattingTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_171'>171</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_171'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>javadocShaped<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.blockCommentInteriorTrailingBlank(com.google.googlejavaformat.java.FormatterTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_172'>172</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_172'/> 
+
+<p class='NO_COVERAGE'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>javadocShaped<br/><b>Killed by : </b>none</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; NO_COVERAGE</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_174'>174</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_174'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>javadocShaped<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.blockCommentTrailingBlank(com.google.googlejavaformat.java.FormatterTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_175'>175</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_175'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>javadocShaped<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.blockCommentInteriorTrailingBlank(com.google.googlejavaformat.java.FormatterTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_176'>176</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_176'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>javadocShaped<br/><b>Killed by : </b>com.google.googlejavaformat.java.PartialFormattingTest.lineInsideComment[2](com.google.googlejavaformat.java.PartialFormattingTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+</td>
+</tr>
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_179'>179</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1bdfa7ad_179'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>javadocShaped<br/><b>Killed by : </b>com.google.googlejavaformat.java.FormatterTest.blockCommentInteriorTrailingBlank(com.google.googlejavaformat.java.FormatterTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+<li class='mutator'>INCREMENTS_MUTATOR</li>
+<li class='mutator'>VOID_METHOD_CALL_MUTATOR</li>
+<li class='mutator'>RETURN_VALS_MUTATOR</li>
+<li class='mutator'>MATH_MUTATOR</li>
+<li class='mutator'>NEGATE_CONDITIONALS_MUTATOR</li>
+<li class='mutator'>INVERT_NEGS_MUTATOR</li>
+<li class='mutator'>CONDITIONALS_BOUNDARY_MUTATOR</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>com.google.googlejavaformat.java.PartialFormattingTest.importJavadocNewlines[2](com.google.googlejavaformat.java.PartialFormattingTest) (7 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[27: B20844369](com.google.googlejavaformat.java.FormatterIntegrationTest) (55 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[163: i60](com.google.googlejavaformat.java.FormatterIntegrationTest) (81 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[88: B29618429](com.google.googlejavaformat.java.FormatterIntegrationTest) (63 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[148: Unformatted](com.google.googlejavaformat.java.FormatterIntegrationTest) (86 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[1: B](com.google.googlejavaformat.java.FormatterIntegrationTest) (74 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[11: B19996259](com.google.googlejavaformat.java.FormatterIntegrationTest) (78 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[107: B64493529](com.google.googlejavaformat.java.FormatterIntegrationTest) (60 ms)</li><li>com.google.googlejavaformat.java.StringWrapperIntegrationTest.idempotent[12](com.google.googlejavaformat.java.StringWrapperIntegrationTest) (10 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[135: P](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[80: B27078833](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[28: B20915776](com.google.googlejavaformat.java.FormatterIntegrationTest) (71 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[11: B19996259](com.google.googlejavaformat.java.FormatterIntegrationTest) (66 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.nestedStatement1[0](com.google.googlejavaformat.java.PartialFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[78: B26928842](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.xhtmlParagraphTag(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.lineWithIdentifier[1](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.windowsLineSeparator(com.google.googlejavaformat.java.JavadocFormattingTest) (3 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.oneLinerWouldBe101(com.google.googlejavaformat.java.JavadocFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[76: B26694550](com.google.googlejavaformat.java.FormatterIntegrationTest) (51 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[25: B20580212](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.joinedAtSign(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[90: B30153869](com.google.googlejavaformat.java.FormatterIntegrationTest) (52 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[115: F](com.google.googlejavaformat.java.FormatterIntegrationTest) (106 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[51: B22815364](com.google.googlejavaformat.java.FormatterIntegrationTest) (59 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[73: B26207047](com.google.googlejavaformat.java.FormatterIntegrationTest) (54 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[150: Unformatted3](com.google.googlejavaformat.java.FormatterIntegrationTest) (71 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.blankLine[0](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.MainTest.javadoc(com.google.googlejavaformat.java.MainTest) (4 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[89: B29705613](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.blankLine[2](com.google.googlejavaformat.java.PartialFormattingTest) (3 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.statementAndComments2[1](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[73: B26207047](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.importJavadocNewlines[0](com.google.googlejavaformat.java.PartialFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[90: B30153869](com.google.googlejavaformat.java.FormatterIntegrationTest) (78 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[143: T](com.google.googlejavaformat.java.FormatterIntegrationTest) (75 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[51: B22815364](com.google.googlejavaformat.java.FormatterIntegrationTest) (57 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[91: B30223986](com.google.googlejavaformat.java.FormatterIntegrationTest) (58 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[149: Unformatted2](com.google.googlejavaformat.java.FormatterIntegrationTest) (77 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[33: B21278211](com.google.googlejavaformat.java.FormatterIntegrationTest) (55 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.joinLines(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[134: NormalAnnotation](com.google.googlejavaformat.java.FormatterIntegrationTest) (60 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[163: i60](com.google.googlejavaformat.java.FormatterIntegrationTest) (75 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[107: B64493529](com.google.googlejavaformat.java.FormatterIntegrationTest) (50 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[107: B64493529](com.google.googlejavaformat.java.FormatterIntegrationTest) (60 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[89: B29705613](com.google.googlejavaformat.java.FormatterIntegrationTest) (60 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[89: B29705613](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[0: A](com.google.googlejavaformat.java.FormatterIntegrationTest) (74 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[0: A](com.google.googlejavaformat.java.FormatterIntegrationTest) (62 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[33: B21278211](com.google.googlejavaformat.java.FormatterIntegrationTest) (60 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[88: B29618429](com.google.googlejavaformat.java.FormatterIntegrationTest) (55 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[73: B26207047](com.google.googlejavaformat.java.FormatterIntegrationTest) (59 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[151: V](com.google.googlejavaformat.java.FormatterIntegrationTest) (93 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[81: B27246427](com.google.googlejavaformat.java.FormatterIntegrationTest) (58 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[90: B30153869](com.google.googlejavaformat.java.FormatterIntegrationTest) (57 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[143: T](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.paramsContinuationIndented(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[74: B26275739](com.google.googlejavaformat.java.FormatterIntegrationTest) (58 ms)</li><li>com.google.googlejavaformat.java.FormatterTest.noBlankAfterLineCommentWithInteriorBlankLine(com.google.googlejavaformat.java.FormatterTest) (4 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[163: i60](com.google.googlejavaformat.java.FormatterIntegrationTest) (55 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[63: B24543625](com.google.googlejavaformat.java.FormatterIntegrationTest) (60 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[70: B25787055](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[159: i281](com.google.googlejavaformat.java.FormatterIntegrationTest) (74 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[5: B142553964](com.google.googlejavaformat.java.FormatterIntegrationTest) (57 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[87: B29368546](com.google.googlejavaformat.java.FormatterIntegrationTest) (55 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[80: B27078833](com.google.googlejavaformat.java.FormatterIntegrationTest) (55 ms)</li><li>com.google.googlejavaformat.java.FormatterTest.blankLinesImportComment(com.google.googlejavaformat.java.FormatterTest) (14 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[91: B30223986](com.google.googlejavaformat.java.FormatterIntegrationTest) (54 ms)</li><li>com.google.googlejavaformat.java.FormatterTest.dontWrapMoeLineComments(com.google.googlejavaformat.java.FormatterTest) (1 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.lineInsideComment[2](com.google.googlejavaformat.java.PartialFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.nestedStatement1[2](com.google.googlejavaformat.java.PartialFormattingTest) (3 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[140: S](com.google.googlejavaformat.java.FormatterIntegrationTest) (62 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[148: Unformatted](com.google.googlejavaformat.java.FormatterIntegrationTest) (54 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.commentBeforeBadConstructor[2](com.google.googlejavaformat.java.PartialFormattingTest) (3 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[132: Multivariables](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[65: B24862959](com.google.googlejavaformat.java.FormatterIntegrationTest) (57 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[96: B32397217](com.google.googlejavaformat.java.FormatterIntegrationTest) (56 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.blankLineBeforeParams(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.b36458607[1](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[34: B21283374](com.google.googlejavaformat.java.FormatterIntegrationTest) (67 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[78: B26928842](com.google.googlejavaformat.java.FormatterIntegrationTest) (55 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[143: T](com.google.googlejavaformat.java.FormatterIntegrationTest) (69 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[25: B20580212](com.google.googlejavaformat.java.FormatterIntegrationTest) (58 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[158: i221](com.google.googlejavaformat.java.FormatterIntegrationTest) (64 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[115: F](com.google.googlejavaformat.java.FormatterIntegrationTest) (66 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[27: B20844369](com.google.googlejavaformat.java.FormatterIntegrationTest) (61 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[78: B26928842](com.google.googlejavaformat.java.FormatterIntegrationTest) (54 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[9: B19950468](com.google.googlejavaformat.java.FormatterIntegrationTest) (71 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.standardizeTags(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[107: B64493529](com.google.googlejavaformat.java.FormatterIntegrationTest) (105 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[70: B25787055](com.google.googlejavaformat.java.FormatterIntegrationTest) (52 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[100: B35797074](com.google.googlejavaformat.java.FormatterIntegrationTest) (58 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.statementAndComments[1](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[87: B29368546](com.google.googlejavaformat.java.FormatterIntegrationTest) (57 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[152: W](com.google.googlejavaformat.java.FormatterIntegrationTest) (79 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[131: MarkerAnnotation](com.google.googlejavaformat.java.FormatterIntegrationTest) (54 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.emptyFile[1](com.google.googlejavaformat.java.PartialFormattingTest) (3 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.significantAsterisks(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[133: N](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[161: i55](com.google.googlejavaformat.java.FormatterIntegrationTest) (73 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.blankAndComment[1](com.google.googlejavaformat.java.PartialFormattingTest) (3 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.br(com.google.googlejavaformat.java.JavadocFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[90: B30153869](com.google.googlejavaformat.java.FormatterIntegrationTest) (55 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[134: NormalAnnotation](com.google.googlejavaformat.java.FormatterIntegrationTest) (70 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[158: i221](com.google.googlejavaformat.java.FormatterIntegrationTest) (70 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.commentBeforeBadConstructor[0](com.google.googlejavaformat.java.PartialFormattingTest) (3 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.u2028LineSeparator(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[122: I202](com.google.googlejavaformat.java.FormatterIntegrationTest) (78 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[136: Pair](com.google.googlejavaformat.java.FormatterIntegrationTest) (59 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[122: I202](com.google.googlejavaformat.java.FormatterIntegrationTest) (60 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[1: B](com.google.googlejavaformat.java.FormatterIntegrationTest) (55 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[122: I202](com.google.googlejavaformat.java.FormatterIntegrationTest) (52 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[9: B19950468](com.google.googlejavaformat.java.FormatterIntegrationTest) (51 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[134: NormalAnnotation](com.google.googlejavaformat.java.FormatterIntegrationTest) (64 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.commentBeforeBadConstructor[1](com.google.googlejavaformat.java.PartialFormattingTest) (3 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[131: MarkerAnnotation](com.google.googlejavaformat.java.FormatterIntegrationTest) (72 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[80: B27078833](com.google.googlejavaformat.java.FormatterIntegrationTest) (55 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[125: L](com.google.googlejavaformat.java.FormatterIntegrationTest) (60 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.unicodeEscapesNotReplaced(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[0: A](com.google.googlejavaformat.java.FormatterIntegrationTest) (76 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[159: i281](com.google.googlejavaformat.java.FormatterIntegrationTest) (74 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.testEmptyLastLine[2](com.google.googlejavaformat.java.PartialFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[33: B21278211](com.google.googlejavaformat.java.FormatterIntegrationTest) (52 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[112: D](com.google.googlejavaformat.java.FormatterIntegrationTest) (105 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[132: Multivariables](com.google.googlejavaformat.java.FormatterIntegrationTest) (74 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[136: Pair](com.google.googlejavaformat.java.FormatterIntegrationTest) (92 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[122: I202](com.google.googlejavaformat.java.FormatterIntegrationTest) (87 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[80: B27078833](com.google.googlejavaformat.java.FormatterIntegrationTest) (55 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[73: B26207047](com.google.googlejavaformat.java.FormatterIntegrationTest) (56 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[118: I](com.google.googlejavaformat.java.FormatterIntegrationTest) (72 ms)</li><li>com.google.googlejavaformat.java.StringWrapperIntegrationTest.testCR[12](com.google.googlejavaformat.java.StringWrapperIntegrationTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.testEmptyLastLine[1](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[110: C](com.google.googlejavaformat.java.FormatterIntegrationTest) (71 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[92: B30764810](com.google.googlejavaformat.java.FormatterIntegrationTest) (57 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[69: B25749989](com.google.googlejavaformat.java.FormatterIntegrationTest) (51 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[133: N](com.google.googlejavaformat.java.FormatterIntegrationTest) (63 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[158: i221](com.google.googlejavaformat.java.FormatterIntegrationTest) (52 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.joinedMultipleAtSign(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[100: B35797074](com.google.googlejavaformat.java.FormatterIntegrationTest) (72 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.quotedTextSplitAcrossLinks(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[88: B29618429](com.google.googlejavaformat.java.FormatterIntegrationTest) (52 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.brAtSignBug(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[136: Pair](com.google.googlejavaformat.java.FormatterIntegrationTest) (79 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.testEmptyLastLine[0](com.google.googlejavaformat.java.PartialFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[112: D](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[34: B21283374](com.google.googlejavaformat.java.FormatterIntegrationTest) (73 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[78: B26928842](com.google.googlejavaformat.java.FormatterIntegrationTest) (56 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[19: B20531711](com.google.googlejavaformat.java.FormatterIntegrationTest) (58 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.moeCommentBeginOnlyInMiddleOfDoc(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[61: B24202287](com.google.googlejavaformat.java.FormatterIntegrationTest) (57 ms)</li><li>com.google.googlejavaformat.java.SnippetFormatterTest.compilation(com.google.googlejavaformat.java.SnippetFormatterTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[76: B26694550](com.google.googlejavaformat.java.FormatterIntegrationTest) (56 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[138: Q](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[79: B26952926](com.google.googlejavaformat.java.FormatterIntegrationTest) (58 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[64: B24702438](com.google.googlejavaformat.java.FormatterIntegrationTest) (62 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[25: B20580212](com.google.googlejavaformat.java.FormatterIntegrationTest) (72 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.javadocCanEndAnywhere(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.javadocFullSentences(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[159: i281](com.google.googlejavaformat.java.FormatterIntegrationTest) (68 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.javaCodeInPre(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.tooLong(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[5: B142553964](com.google.googlejavaformat.java.FormatterIntegrationTest) (52 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[28: B20915776](com.google.googlejavaformat.java.FormatterIntegrationTest) (59 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[135: P](com.google.googlejavaformat.java.FormatterIntegrationTest) (58 ms)</li><li>com.google.googlejavaformat.java.FormatterTest.wrapLineComment(com.google.googlejavaformat.java.FormatterTest) (3 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[69: B25749989](com.google.googlejavaformat.java.FormatterIntegrationTest) (56 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.preCodeExample(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[95: B32284705](com.google.googlejavaformat.java.FormatterIntegrationTest) (56 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[140: S](com.google.googlejavaformat.java.FormatterIntegrationTest) (68 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.trailingLink(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.unicodeCharacterCountArguableBug(com.google.googlejavaformat.java.JavadocFormattingTest) (3 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[113: E](com.google.googlejavaformat.java.FormatterIntegrationTest) (69 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[127: M](com.google.googlejavaformat.java.FormatterIntegrationTest) (192 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[77: B26884608](com.google.googlejavaformat.java.FormatterIntegrationTest) (56 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[87: B29368546](com.google.googlejavaformat.java.FormatterIntegrationTest) (59 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.blankAndComment[2](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.moeComments(com.google.googlejavaformat.java.JavadocFormattingTest) (3 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[27: B20844369](com.google.googlejavaformat.java.FormatterIntegrationTest) (78 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[27: B20844369](com.google.googlejavaformat.java.FormatterIntegrationTest) (60 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[74: B26275739](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[81: B27246427](com.google.googlejavaformat.java.FormatterIntegrationTest) (51 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[138: Q](com.google.googlejavaformat.java.FormatterIntegrationTest) (74 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.blankAndComment[0](com.google.googlejavaformat.java.PartialFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.emptyFile[2](com.google.googlejavaformat.java.PartialFormattingTest) (3 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[127: M](com.google.googlejavaformat.java.FormatterIntegrationTest) (68 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[158: i221](com.google.googlejavaformat.java.FormatterIntegrationTest) (59 ms)</li><li>com.google.googlejavaformat.java.StringWrapperIntegrationTest.testCRLF[12](com.google.googlejavaformat.java.StringWrapperIntegrationTest) (6 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[136: Pair](com.google.googlejavaformat.java.FormatterIntegrationTest) (52 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.javadocSentenceFragment(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.paramsOtherIndents(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[61: B24202287](com.google.googlejavaformat.java.FormatterIntegrationTest) (57 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.statementAndComments[0](com.google.googlejavaformat.java.PartialFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[112: D](com.google.googlejavaformat.java.FormatterIntegrationTest) (64 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.brSpaceBug(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[148: Unformatted](com.google.googlejavaformat.java.FormatterIntegrationTest) (80 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[87: B29368546](com.google.googlejavaformat.java.FormatterIntegrationTest) (61 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.listItemSpaces(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.emptyFile[0](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.statementAndComments[2](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.onlyParams(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[133: N](com.google.googlejavaformat.java.FormatterIntegrationTest) (84 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[0: A](com.google.googlejavaformat.java.FormatterIntegrationTest) (191 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[146: U](com.google.googlejavaformat.java.FormatterIntegrationTest) (55 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[152: W](com.google.googlejavaformat.java.FormatterIntegrationTest) (64 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[152: W](com.google.googlejavaformat.java.FormatterIntegrationTest) (72 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[64: B24702438](com.google.googlejavaformat.java.FormatterIntegrationTest) (59 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.blankLine[1](com.google.googlejavaformat.java.PartialFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.links(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[79: B26952926](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.lists(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[150: Unformatted3](com.google.googlejavaformat.java.FormatterIntegrationTest) (54 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.b36458607[0](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.FormatterTest.docCommentTrailingBlank(com.google.googlejavaformat.java.FormatterTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[59: B23749160](com.google.googlejavaformat.java.FormatterIntegrationTest) (58 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[105: B38241237](com.google.googlejavaformat.java.FormatterIntegrationTest) (57 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[105: B38241237](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[21: B20567842](com.google.googlejavaformat.java.FormatterIntegrationTest) (52 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[59: B23749160](com.google.googlejavaformat.java.FormatterIntegrationTest) (60 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[61: B24202287](com.google.googlejavaformat.java.FormatterIntegrationTest) (87 ms)</li><li>com.google.googlejavaformat.java.FormatterTest.lineCommentTrailingBlank(com.google.googlejavaformat.java.FormatterTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[79: B26952926](com.google.googlejavaformat.java.FormatterIntegrationTest) (57 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[64: B24702438](com.google.googlejavaformat.java.FormatterIntegrationTest) (57 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.noTokensOnLine[2](com.google.googlejavaformat.java.PartialFormattingTest) (7 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[110: C](com.google.googlejavaformat.java.FormatterIntegrationTest) (101 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[149: Unformatted2](com.google.googlejavaformat.java.FormatterIntegrationTest) (72 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[44: B21954779](com.google.googlejavaformat.java.FormatterIntegrationTest) (54 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[74: B26275739](com.google.googlejavaformat.java.FormatterIntegrationTest) (61 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.statementAndComments2[2](com.google.googlejavaformat.java.PartialFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.nestedStatement1[1](com.google.googlejavaformat.java.PartialFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[69: B25749989](com.google.googlejavaformat.java.FormatterIntegrationTest) (69 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[34: B21283374](com.google.googlejavaformat.java.FormatterIntegrationTest) (67 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.lineWithIdentifier[0](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.loneBraceDoesNotStartInlineTag(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[93: B30789352](com.google.googlejavaformat.java.FormatterIntegrationTest) (54 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[127: M](com.google.googlejavaformat.java.FormatterIntegrationTest) (95 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[44: B21954779](com.google.googlejavaformat.java.FormatterIntegrationTest) (72 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[105: B38241237](com.google.googlejavaformat.java.FormatterIntegrationTest) (62 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[118: I](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[138: Q](com.google.googlejavaformat.java.FormatterIntegrationTest) (59 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[63: B24543625](com.google.googlejavaformat.java.FormatterIntegrationTest) (64 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[152: W](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.SnippetFormatterTest.compilationWithComments(com.google.googlejavaformat.java.SnippetFormatterTest) (1 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.importJavadocNewlines[1](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[63: B24543625](com.google.googlejavaformat.java.FormatterIntegrationTest) (62 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[51: B22815364](com.google.googlejavaformat.java.FormatterIntegrationTest) (83 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[125: L](com.google.googlejavaformat.java.FormatterIntegrationTest) (52 ms)</li><li>com.google.googlejavaformat.java.MainTest.newline(com.google.googlejavaformat.java.MainTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterTest.lineCommentTrailingThinSpace(com.google.googlejavaformat.java.FormatterTest) (7 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[113: E](com.google.googlejavaformat.java.FormatterIntegrationTest) (72 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[112: D](com.google.googlejavaformat.java.FormatterIntegrationTest) (60 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[92: B30764810](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[110: C](com.google.googlejavaformat.java.FormatterIntegrationTest) (52 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[93: B30789352](com.google.googlejavaformat.java.FormatterIntegrationTest) (58 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.statementAndComments2[0](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.paragraphTag(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[96: B32397217](com.google.googlejavaformat.java.FormatterIntegrationTest) (55 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[151: V](com.google.googlejavaformat.java.FormatterIntegrationTest) (68 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[159: i281](com.google.googlejavaformat.java.FormatterIntegrationTest) (52 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[33: B21278211](com.google.googlejavaformat.java.FormatterIntegrationTest) (64 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[30: B21105569](com.google.googlejavaformat.java.FormatterIntegrationTest) (64 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[19: B20531711](com.google.googlejavaformat.java.FormatterIntegrationTest) (75 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[146: U](com.google.googlejavaformat.java.FormatterIntegrationTest) (70 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.lineInsideComment[1](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[146: U](com.google.googlejavaformat.java.FormatterIntegrationTest) (80 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[79: B26952926](com.google.googlejavaformat.java.FormatterIntegrationTest) (58 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[1: B](com.google.googlejavaformat.java.FormatterIntegrationTest) (63 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[88: B29618429](com.google.googlejavaformat.java.FormatterIntegrationTest) (60 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[100: B35797074](com.google.googlejavaformat.java.FormatterIntegrationTest) (106 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.emptyMultipleLines(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.b36458607[2](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[132: Multivariables](com.google.googlejavaformat.java.FormatterIntegrationTest) (66 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.preMostlyUntouched(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[61: B24202287](com.google.googlejavaformat.java.FormatterIntegrationTest) (54 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[95: B32284705](com.google.googlejavaformat.java.FormatterIntegrationTest) (57 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.tableMostlyUntouched(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[115: F](com.google.googlejavaformat.java.FormatterIntegrationTest) (83 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.inferParagraphTags(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[91: B30223986](com.google.googlejavaformat.java.FormatterIntegrationTest) (60 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[113: E](com.google.googlejavaformat.java.FormatterIntegrationTest) (69 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[1: B](com.google.googlejavaformat.java.FormatterIntegrationTest) (64 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[146: U](com.google.googlejavaformat.java.FormatterIntegrationTest) (71 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[28: B20915776](com.google.googlejavaformat.java.FormatterIntegrationTest) (56 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[139: R](com.google.googlejavaformat.java.FormatterIntegrationTest) (64 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[34: B21283374](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[139: R](com.google.googlejavaformat.java.FormatterIntegrationTest) (65 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[115: F](com.google.googlejavaformat.java.FormatterIntegrationTest) (76 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[125: L](com.google.googlejavaformat.java.FormatterIntegrationTest) (76 ms)</li><li>com.google.googlejavaformat.java.StringWrapperIntegrationTest.test[12](com.google.googlejavaformat.java.StringWrapperIntegrationTest) (5 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[118: I](com.google.googlejavaformat.java.FormatterIntegrationTest) (66 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.lineWithIdentifier[2](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.FormatterTest.testFormatLengthUpToEOF(com.google.googlejavaformat.java.FormatterTest) (4 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.htmlTagsInCode(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[21: B20567842](com.google.googlejavaformat.java.FormatterIntegrationTest) (60 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.unclosedList(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[64: B24702438](com.google.googlejavaformat.java.FormatterIntegrationTest) (52 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[110: C](com.google.googlejavaformat.java.FormatterIntegrationTest) (58 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[5: B142553964](com.google.googlejavaformat.java.FormatterIntegrationTest) (57 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[118: I](com.google.googlejavaformat.java.FormatterIntegrationTest) (97 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[139: R](com.google.googlejavaformat.java.FormatterIntegrationTest) (57 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[98: B33358723](com.google.googlejavaformat.java.FormatterIntegrationTest) (59 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[68: B25372815](com.google.googlejavaformat.java.FormatterIntegrationTest) (52 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[105: B38241237](com.google.googlejavaformat.java.FormatterIntegrationTest) (90 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[30: B21105569](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[81: B27246427](com.google.googlejavaformat.java.FormatterIntegrationTest) (54 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[132: Multivariables](com.google.googlejavaformat.java.FormatterIntegrationTest) (67 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[150: Unformatted3](com.google.googlejavaformat.java.FormatterIntegrationTest) (100 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[98: B33358723](com.google.googlejavaformat.java.FormatterIntegrationTest) (52 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[68: B25372815](com.google.googlejavaformat.java.FormatterIntegrationTest) (56 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[150: Unformatted3](com.google.googlejavaformat.java.FormatterIntegrationTest) (67 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[21: B20567842](com.google.googlejavaformat.java.FormatterIntegrationTest) (74 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[95: B32284705](com.google.googlejavaformat.java.FormatterIntegrationTest) (67 ms)</li><li>com.google.googlejavaformat.java.FormatterTest.onlyWrapLineCommentOnWhitespace(com.google.googlejavaformat.java.FormatterTest) (5 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.statementAndComments3[1](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[76: B26694550](com.google.googlejavaformat.java.FormatterIntegrationTest) (63 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.unicodeEscapesNotInterpretedBug(com.google.googlejavaformat.java.JavadocFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[25: B20580212](com.google.googlejavaformat.java.FormatterIntegrationTest) (66 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[30: B21105569](com.google.googlejavaformat.java.FormatterIntegrationTest) (57 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[65: B24862959](com.google.googlejavaformat.java.FormatterIntegrationTest) (52 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.paragraphTagNewlines(com.google.googlejavaformat.java.JavadocFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[98: B33358723](com.google.googlejavaformat.java.FormatterIntegrationTest) (55 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.lists2(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[51: B22815364](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[89: B29705613](com.google.googlejavaformat.java.FormatterIntegrationTest) (56 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.removeCloseTags(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[19: B20531711](com.google.googlejavaformat.java.FormatterIntegrationTest) (61 ms)</li><li>com.google.googlejavaformat.java.FormatterTest.onlyWrapLineCommentOnWhitespace_noLeadingWhitespace(com.google.googlejavaformat.java.FormatterTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[139: R](com.google.googlejavaformat.java.FormatterIntegrationTest) (81 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[69: B25749989](com.google.googlejavaformat.java.FormatterIntegrationTest) (55 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[28: B20915776](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.oneLinerIs100(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[125: L](com.google.googlejavaformat.java.FormatterIntegrationTest) (69 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[92: B30764810](com.google.googlejavaformat.java.FormatterIntegrationTest) (58 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[11: B19996259](com.google.googlejavaformat.java.FormatterIntegrationTest) (52 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.heading(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[44: B21954779](com.google.googlejavaformat.java.FormatterIntegrationTest) (59 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[148: Unformatted](com.google.googlejavaformat.java.FormatterIntegrationTest) (68 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.closeInnerListStillNewline(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[59: B23749160](com.google.googlejavaformat.java.FormatterIntegrationTest) (52 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[135: P](com.google.googlejavaformat.java.FormatterIntegrationTest) (83 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.lineInsideComment[0](com.google.googlejavaformat.java.PartialFormattingTest) (8 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[151: V](com.google.googlejavaformat.java.FormatterIntegrationTest) (54 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[143: T](com.google.googlejavaformat.java.FormatterIntegrationTest) (75 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.joinedTokens(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[76: B26694550](com.google.googlejavaformat.java.FormatterIntegrationTest) (68 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.listItemWrap(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[63: B24543625](com.google.googlejavaformat.java.FormatterIntegrationTest) (54 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[149: Unformatted2](com.google.googlejavaformat.java.FormatterIntegrationTest) (84 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[140: S](com.google.googlejavaformat.java.FormatterIntegrationTest) (54 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[163: i60](com.google.googlejavaformat.java.FormatterIntegrationTest) (52 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.empty(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[11: B19996259](com.google.googlejavaformat.java.FormatterIntegrationTest) (86 ms)</li><li>com.google.googlejavaformat.java.MainTest.noFormatJavadoc(com.google.googlejavaformat.java.MainTest) (8 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.moeCommentEndOnly(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[44: B21954779](com.google.googlejavaformat.java.FormatterIntegrationTest) (56 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[59: B23749160](com.google.googlejavaformat.java.FormatterIntegrationTest) (57 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.nestedStatement2[1](com.google.googlejavaformat.java.PartialFormattingTest) (4 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[21: B20567842](com.google.googlejavaformat.java.FormatterIntegrationTest) (59 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[91: B30223986](com.google.googlejavaformat.java.FormatterIntegrationTest) (57 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[70: B25787055](com.google.googlejavaformat.java.FormatterIntegrationTest) (60 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.multilineWrap(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[9: B19950468](com.google.googlejavaformat.java.FormatterIntegrationTest) (54 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[151: V](com.google.googlejavaformat.java.FormatterIntegrationTest) (73 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.noTokensOnLine[0](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[133: N](com.google.googlejavaformat.java.FormatterIntegrationTest) (72 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[93: B30789352](com.google.googlejavaformat.java.FormatterIntegrationTest) (65 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[131: MarkerAnnotation](com.google.googlejavaformat.java.FormatterIntegrationTest) (63 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.removeInitialParagraphTag(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.moeCommentBeginOnlyAtEndOfDoc(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[9: B19950468](com.google.googlejavaformat.java.FormatterIntegrationTest) (56 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.preNotWrapped(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[30: B21105569](com.google.googlejavaformat.java.FormatterIntegrationTest) (58 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.noTokensOnLine[1](com.google.googlejavaformat.java.PartialFormattingTest) (8 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[68: B25372815](com.google.googlejavaformat.java.FormatterIntegrationTest) (68 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[140: S](com.google.googlejavaformat.java.FormatterIntegrationTest) (83 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[149: Unformatted2](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.notJavadoc(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterTest.blockCommentInteriorTrailingBlank(com.google.googlejavaformat.java.FormatterTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[98: B33358723](com.google.googlejavaformat.java.FormatterIntegrationTest) (56 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[92: B30764810](com.google.googlejavaformat.java.FormatterIntegrationTest) (57 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.nestedStatement2[0](com.google.googlejavaformat.java.PartialFormattingTest) (21 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[127: M](com.google.googlejavaformat.java.FormatterIntegrationTest) (86 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[96: B32397217](com.google.googlejavaformat.java.FormatterIntegrationTest) (57 ms)</li><li>com.google.googlejavaformat.java.FormatterTest.blockCommentTrailingBlank(com.google.googlejavaformat.java.FormatterTest) (3 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[5: B142553964](com.google.googlejavaformat.java.FormatterIntegrationTest) (58 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[65: B24862959](com.google.googlejavaformat.java.FormatterIntegrationTest) (57 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[113: E](com.google.googlejavaformat.java.FormatterIntegrationTest) (103 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[134: NormalAnnotation](com.google.googlejavaformat.java.FormatterIntegrationTest) (52 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[100: B35797074](com.google.googlejavaformat.java.FormatterIntegrationTest) (58 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[135: P](com.google.googlejavaformat.java.FormatterIntegrationTest) (81 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.noAsterisk(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[95: B32284705](com.google.googlejavaformat.java.FormatterIntegrationTest) (54 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.nestedStatement2[2](com.google.googlejavaformat.java.PartialFormattingTest) (3 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[74: B26275739](com.google.googlejavaformat.java.FormatterIntegrationTest) (56 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[68: B25372815](com.google.googlejavaformat.java.FormatterIntegrationTest) (63 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.codeInCode(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[131: MarkerAnnotation](com.google.googlejavaformat.java.FormatterIntegrationTest) (79 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.statementAndComments3[2](com.google.googlejavaformat.java.PartialFormattingTest) (5 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[96: B32397217](com.google.googlejavaformat.java.FormatterIntegrationTest) (53 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[81: B27246427](com.google.googlejavaformat.java.FormatterIntegrationTest) (54 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.blockquote(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[65: B24862959](com.google.googlejavaformat.java.FormatterIntegrationTest) (56 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.simple(com.google.googlejavaformat.java.JavadocFormattingTest) (2 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCR[138: Q](com.google.googlejavaformat.java.FormatterIntegrationTest) (65 ms)</li><li>com.google.googlejavaformat.java.PartialFormattingTest.statementAndComments3[0](com.google.googlejavaformat.java.PartialFormattingTest) (6 ms)</li><li>com.google.googlejavaformat.java.JavadocFormattingTest.commentMostlyUntouched(com.google.googlejavaformat.java.JavadocFormattingTest) (1 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentLF[19: B20531711](com.google.googlejavaformat.java.FormatterIntegrationTest) (56 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.idempotentCRLF[70: B25787055](com.google.googlejavaformat.java.FormatterIntegrationTest) (56 ms)</li><li>com.google.googlejavaformat.java.FormatterIntegrationTest.format[93: B30789352](com.google.googlejavaformat.java.FormatterIntegrationTest) (57 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.4.3
+
+</body>
+</html>
