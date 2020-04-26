@@ -286,18 +286,31 @@
               <version>1.4.3</version>
               <configuration>
                   <targetClasses>
+<<<<<<< HEAD
                       <param>com.google.googlejavaformat.java.javadoc.JavadocFormatter</param>
                   </targetClasses>
                   <targetTests>
                       <param>com.google.googlejavaformat.java.JavadocFormattingTest</param>
+=======
+                      <param>com.google.googlejavaformat.*</param>
+                  </targetClasses>
+                  <targetTests>
+                      <param>com.google.googlejavaformat.*</param>
+>>>>>>> d2d52881e87f7a17855efb6e8cf91eeb7f91014d
                   </targetTests>
                   <maxMutationsPerClass>4</maxMutationsPerClass>
                   <threads>3</threads>
                   <timeoutFactor>1.1</timeoutFactor>
                   <timeoutConstant>5000</timeoutConstant>
+<<<<<<< HEAD
                   <!-- <verbose>true</verbose> -->
               </configuration>
           </plugin>
+=======
+                  <verbose>true</verbose>
+              </configuration>
+            </plugin>
+>>>>>>> d2d52881e87f7a17855efb6e8cf91eeb7f91014d
         </plugins>
       </build>
     </profile>
